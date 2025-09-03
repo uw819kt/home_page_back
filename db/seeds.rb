@@ -11,7 +11,7 @@ skills_data = [
   { name: "Ruby", description: "基本は理解しています" },
   { name: "Ruby on Rails", description: "API開発に取り組み中" },
   { name: "PostgreSQL", description: "学習中…" },
-  # frontend 
+  # frontend
   { name: "React", description: "学習中…" },
   { name: "Next.js", description: "学習中…" },
   { name: "TypeScript", description: "学習中…" },
@@ -22,7 +22,7 @@ skills_data = [
   { name: "VS Code", description: "メインエディタ" },
   { name: "Docker", description: "学習中…" },
   # Past Experience
-  { name: "管理栄養士資格", description: "前職での専門スキル" },
+  { name: "管理栄養士資格", description: "前職での専門スキル" }
 ]
 
 skills_data.each do |skill_data|
@@ -38,7 +38,7 @@ projects_data = [
     status: "開発中",
     github_url: "https://github.com/uw819kt/home_page_back"
   }
-]    
+]
 projects_data.each do |project_data|
   Project.create!(project_data)
 end
