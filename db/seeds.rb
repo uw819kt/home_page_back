@@ -1,7 +1,6 @@
 # Profile作成
 Profile.create!(
   name: "Miya",
-  title: "エンジニアLv.1",
   description: "管理栄養士からITエンジニアへ転身。Next.js、Ruby on Railsを中心に学習中です。個人開発にも挑戦していきたいです。",
   github_url: "https://github.com/uw819kt",
 )
