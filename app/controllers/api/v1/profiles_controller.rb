@@ -1,11 +1,11 @@
 class Api::V1::ProfilesController < ApplicationController
   def show
-    @profile = Profile.current
+    @profile = Profile.first
     render json: @profile
   end
 
   def update
-    @profile = Profile.current
+    @profile = Profile.first
 
     if @profile.update(profile_params)
       render json: @profile

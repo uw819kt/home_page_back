@@ -3,7 +3,7 @@ class Api::V1::ProjectsController < ApplicationController
 
   # GET /api/v1/projects
   def index
-    @projects = Project.recent
+    @projects = Project.all
     render json: @projects
   end
 
