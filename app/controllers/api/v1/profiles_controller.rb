@@ -6,11 +6,11 @@ class Api::V1::ProfilesController < ApplicationController
 
   def update
     @profile = Profile.current
-    
+
     if @profile.update(profile_params)
       render json: @profile
     else
-      render json: { errors: @profile.errors.full_messages }, 
+      render json: { errors: @profile.errors.full_messages },
              status: :unprocessable_entity
     end
   end

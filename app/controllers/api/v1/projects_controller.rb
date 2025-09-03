@@ -1,5 +1,5 @@
 class Api::V1::ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :update, :destroy]
+  before_action :set_project, only: [ :show, :update, :destroy ]
 
   # GET /api/v1/projects
   def index
@@ -15,11 +15,11 @@ class Api::V1::ProjectsController < ApplicationController
   # POST /api/v1/projects
   def create
     @project = Project.new(project_params)
-    
+
     if @project.save
       render json: @project, status: :created
     else
-      render json: { errors: @project.errors.full_messages }, 
+      render json: { errors: @project.errors.full_messages },
              status: :unprocessable_entity
     end
   end
@@ -29,7 +29,7 @@ class Api::V1::ProjectsController < ApplicationController
     if @project.update(project_params)
       render json: @project
     else
-      render json: { errors: @project.errors.full_messages }, 
+      render json: { errors: @project.errors.full_messages },
              status: :unprocessable_entity
     end
   end
@@ -49,7 +49,7 @@ class Api::V1::ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description, :tech_stack, 
+    params.require(:project).permit(:title, :description, :tech_stack,
                                    :status, :github_url, :demo_url)
   end
 end
