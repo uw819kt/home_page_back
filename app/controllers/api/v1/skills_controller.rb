@@ -3,15 +3,9 @@ class Api::V1::SkillsController < ApplicationController
 
   # GET /api/v1/skills
   def index
-    @skills = Skill.ordered
+    @skills = Skill.all
 
-    # カテゴリ別にグループ化して返す
-    grouped_skills = @skills.group_by(&:category)
-
-    render json: {
-      skills: grouped_skills,
-      categories: Skill::CATEGORIES
-    }
+    render json: @skills
   end
 
   # GET /api/v1/skills/:id
